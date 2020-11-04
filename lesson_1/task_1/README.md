@@ -33,7 +33,7 @@ Esta tarefa tem como objectivo introduzir os conceitos básicos associados à cr
 -	Usar o elemento HTML style
 
 13. Na pasta “BlackGooseBistro”, iniciar um servidor Web simples: 
--	`python -m SimpleHTTPServer 8080`
+-	`python -m http.server 8000`
 
 14. No Browser Web, aceder à pagina criada, servida através do servidor Web: http://localhost:8080/index.html
 
