@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Marko One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Marko One'), local('MarkoOne-Regular'), url(https://fonts.gstatic.com/s/markoone/v10/9Btq3DFG0cnVM5lw1haqLZ8e.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    font-family: Georgia, sans-serif;
+    font-size: small;
+    line-height: 1.75em;
+}
+
+p,dl{
+    font-size: 0.875em;
+}
+
+h1{
+    font-size: 1.5em; 
+}
+
+h2{
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    color: purple;
+}
+
+dl{
+    font-weight: bold;
+}
+
+dt strong{
+    font-style: italic;
+    color: maroon;
+}
+
+#info{
+    color: purple;
+}
+
+#info p{
+    font-style: italic;
+    color: grey;
+}
+
+.price{
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+    color: grey;
+}
+
+.label{
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;   
+}
+
+.warning{
+    font-variant: x-small;
+    color: red;
+}
+
+h1,h2,#info{
+    text-align: center;
+}
+
+#appetizers p, #entrees p{
+    text-align: center;
+    font-style: italic; 
+}
+
+dt{
+    color: sienna;
+}
+
+#info h1{
+    text-shadow: .1em .1em .2em lightslategray;
+}
