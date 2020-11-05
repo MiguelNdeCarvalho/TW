@@ -1,0 +1,80 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta charset="utf-8" >
+      <title>Contest Entry Form</title>
+      <style type="text/css">
+        ol, ul { 
+          list-style-type: none;
+        }
+    </style>
+  </head>
+
+  <body>
+
+  <h1>&ldquo;Pimp My Shoes&rdquo; Contest Entry Form</h1>
+
+  <p>Want to trade in your old sneakers for a custom pair of Forcefields? Make a case for why your shoes have <em>got</em> to go and you may be one of ten lucky winners.</p>
+
+  <p>Contest Entry Information</p>
+
+
+  <form method="post" accept-charset="utf-8">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="nome"><br>
+    <label for="email">Email Address:</label>                                      
+    <input type="text" id="email" name="email"><br>
+    <label for="state">State:</label>                                         
+    <input type="text" id="state" name="state"><br>
+    <label for="story">My shoes are SO old:</label></br> 
+    <textarea id="story" name="story" rows="4" cols="60">
+    No more than 300 characters long
+    </textarea><br>
+    
+    <h2>Design your custom Forcefields:</h2>                                                                                               
+    <p>Custom Shoe Design</p> 
+    
+    <p>Color <em>(choose one)</em>:</p>
+    <input type="radio" id="red" name="color" value="red">
+    <label for="red">Red</label><br>
+    <input type="radio" id="blue" name="color" value="blue">                                         
+    <label for="blue">Blue</label><br>
+    <input type="radio" id="black" name="color" value="black">                            
+    <label for="black">Black</label><br>
+    <input type="radio" id="silver" name="color" value="silver">                             
+    <label for="silver">Silver</label><br
+  
+    <p>Features <em>(Choose as many as you want)</em></p>
+    <input type="checkbox" id="feauture1" name="features[]" value="sparkley_laces">
+    <label for="feauture1">Sparkley Laces</label><br>
+    <input type="checkbox" id="feauture2" name="features[]" value="metallic_logo" checked>
+    <label for="feauture2">Metallic Logo</label><br>
+    <input type="checkbox" id="feauture3" name="features[]" value="light_up_heels">
+    <label for="feauture3">Light-up heels</label><br>
+    <input type="checkbox" id="feauture4" name="features[]" value="mp3_enabled">
+    <label for="feauture4">MP3-enabled</label><br>
+  
+    <p>Size</p>
+    <p>Sizes reflect standard men's sizes:</p>
+    <select name="cars" id="cars">
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+    </select>
+    </br>
+    
+    <input type="submit" value="Pimp My Shoes!">
+    <input type="reset" value="Reset">
+  </form>
+
+
+  </body>
+</html>
