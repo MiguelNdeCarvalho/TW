@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Million Dollar WebApp</title>
+</head>
+
+<body>
+
+	<script>
+		let originalTitle = document.title;
+		
+		function showUnreadCount(unread)
+		{
+			document.title=originalTitle + ` (${unread} new messages)!`;
+		}
+
+		//showUnreadCount(5);
+		var value = 1; 
+		var i = 0;
+		var colors = ['cyan', 'red', 'green', 'blue'];
+		function button()
+		{
+			showUnreadCount(value);
+			document.getElementById("container").innerHTML = `You have ${value} unread messages`;
+			value++;
+			document.getElementById("container").style.color = colors[i];
+			console.log("Current color: " + colors[i]);
+			i++;
+		}
+	</script>
+	
+	<div id="container">
+		<p>Welcome to the Billion Dollar Web Page!</p>
+	</div>
+	<button onclick="button()">Click me!</button>
+</body>
+</html>
