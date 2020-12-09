@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Escolha o prato principal</title>
+
+<style type="text/css">
+
+.menuEntry {
+	margin-left: 40px;
+}
+</style>
+
+</head>
+<body>
+
+	<h3>Escolha o prato principal</h3>
+    <p id="currentMenuEntry">A sua escolha para o prato principal é:</p>
+	<table>
+		<tr>
+			<td>Bochechas assadas no forno com batatinhas forno</td>
+			<td><input class="menuEntry" type="button" id="principal1"
+				value="Escolher" /></td>
+		</tr>
+
+		<tr>
+			<td>Rabo de boi estufado em vinho tinto</td>
+			<td><input class="menuEntry" type="button" id="principal2"
+				value="Escolher" /></td>
+		</tr>
+
+		<tr>
+			<td>Migas alentejanas com carne de porco frita</td>
+			<td><input class="menuEntry" type="button" id="principal3"
+				value="Escolher" /></td>
+		</tr>
+
+		<tr>
+			<td>SLombinho de porco alentejano</td>
+			<td><input class="menuEntry" type="button" id="principal4"
+				value="Escolher" /></td>
+		</tr>
+
+		<tr>
+			<td>Bifes de mil e uma maneiras"</td>
+			<td><input class="menuEntry" type="button" id="principal5"
+				value="Escolher" /></td>
+		</tr>
+	</table>
+	
+	<a href="bebidas.html">Escolher a bebida</a>
+	
+	<script type="text/javascript">
+		function addItem() {
+			
+		}
+
+		function updateCurrentMenuEntry() {
+		
+		}
+
+		var elements = document.getElementsByClassName("menuEntry");
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].addEventListener('click', addItem, false);
+		}
+
+		updateCurrentMenuEntry();
+	</script>
+	
+</body>
+</html>
