@@ -7,13 +7,27 @@
 <body>
 
 	<h3>Criar encomenda</h3>
-	<form method='post' action='#'>
+	<form method='post' action='/new-order'>
+		
+		<label>ID do Cliente:</label>
+		<input type="text" id="clientId" name="clientId"/> 
+		</br>
+		
+		<label>Entrada:</label>
+		<input type="text" id="entry" name="entry"/>
+		</br>
 
-		<input type="text" id="client-id" name="client-id"/> 
-		<input type="text" id="entrada" name="entrada"/>
-		<input type="text" id="prato-principal" name="prato-principal"/>
-		<input type="text" id="bebida" name="bebida"/>
-		<input type="text" id="sobremesa" name="sobremesa"/> 
+		<label>Prato Principal:</label>
+		<input type="text" id="mainCourse" name="mainCourse"/>
+		</br>
+		
+		<label>Bebida:</label>
+		<input type="text" id="drink" name="drink"/>
+		</br>
+
+		<label>Sobremesa:</label>
+		<input type="text" id="dessert" name="dessert"/> 
+		</br>	
 		
 		<input type="submit" value="Submit">
 
