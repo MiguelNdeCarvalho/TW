@@ -19,11 +19,13 @@ public class NewClientController {
     
 	@PostMapping("/new-client")
 	public String newClient(
-			@RequestParam(name="name", required=false, defaultValue="World") String name, 
+			@RequestParam(name="firstName", required=false, defaultValue="World") String firstName, 
+			@RequestParam(name="lastName", required=false, defaultValue="") String lastName,
+			@RequestParam(name="mail", required=false, defaultValue="") String mail,
 			Model model) 
 	{
 		
-		repository.save(new Client(name));
+		repository.save(new Client(firstName, lastName, mail));
 		
 		log.info("Customers found with findAll():");
 		log.info("-------------------------------");
@@ -32,7 +34,9 @@ public class NewClientController {
 		}
 		log.info("");
 		
-		model.addAttribute("name", name);
+		model.addAttribute("name", firstName);
+		model.addAttribute("surname", lastName);
+		model.addAttribute("mail", mail);
 		return "new-client-view";
 	}
 }

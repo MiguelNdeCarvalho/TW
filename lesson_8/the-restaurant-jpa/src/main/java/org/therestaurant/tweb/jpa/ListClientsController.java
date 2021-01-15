@@ -21,7 +21,9 @@ public class ListClientsController {
     
 	@GetMapping("/list-clients")
 	public String listClients(
-			@RequestParam(name="name", required=false, defaultValue="World") String name, 
+			@RequestParam(name="firstName", required=false, defaultValue="World") String firstName, 
+			@RequestParam(name="lastName", required=false, defaultValue="") String lastName,
+			@RequestParam(name="mail", required=false, defaultValue="") String mail,
 			Model model) 
 	{		
 		List<Client> customerList = (List<Client>) repository.findAll();
