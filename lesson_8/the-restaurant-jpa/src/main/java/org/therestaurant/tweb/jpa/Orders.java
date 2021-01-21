@@ -13,19 +13,20 @@ public class Orders {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	
-	@Column(nullable = false)	
 	private Long id;
+
+	@Column(nullable = false)
 	private String entry, mainCourse, drink, dessert;
 	
 
 	@ManyToOne
-    	@JoinColumn(name="user_id")
+    	@JoinColumn(name="clientID")
     	private Client client;
 
 	protected Orders() {}
 
-	public Orders(String entry, String mainCourse, String drink, String dessert) {
+	public Orders(Client client, String entry, String mainCourse, String drink, String dessert) {
+		this.client = client;
 		this.entry = entry;
 		this.mainCourse = mainCourse;
 		this.drink = drink;

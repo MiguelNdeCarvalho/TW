@@ -16,7 +16,7 @@ public class Client {
 	private String firstName, lastName, mail;
 
 	@OneToMany(mappedBy = "client")
-    	private List <Orders> orders;
+    	private List<Orders> orders;
 
 	protected Client() {}
 

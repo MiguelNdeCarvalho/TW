@@ -11,10 +11,30 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class NewOrderController {
 
     @Autowired
-    private ClientRepository repository;
+    private ClientRepository clientRepository;
     
-	public String newOrder() 
+    @Autowired
+    private OrdersRepository ordersRepository;
+    
+    @PostMapping("/new-order")
+	public String newOrder(
+			@RequestParam(name="clientID", required=true) long clientID, 
+			@RequestParam(name="entry", required=false, defaultValue="") String entry,
+			@RequestParam(name="mainCourse", required=false, defaultValue="") String mainCourse,
+			@RequestParam(name="drink", required=false, defaultValue="") String drink,
+			@RequestParam(name="dessert", required=false, defaultValue="") String dessert,
+			Model model) 
 	{
+		
+		Client client = clientRepository.findById(clientID);
+		ordersRepository.save(new Orders(client, entry, mainCourse, drink, dessert));
+
+		model.addAttribute("clientID", clientID);
+		model.addAttribute("entry", entry);
+		model.addAttribute("mainCourse", mainCourse);
+		model.addAttribute("drink", drink);
+		model.addAttribute("dessert", dessert);
+
 		return "new-order-view";
 	}
 }
