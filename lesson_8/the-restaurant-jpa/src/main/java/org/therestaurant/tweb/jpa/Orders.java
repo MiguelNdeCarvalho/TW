@@ -20,8 +20,8 @@ public class Orders {
 	
 
 	@ManyToOne
-    	@JoinColumn(name="clientID")
-    	private Client client;
+	@JoinColumn(name="clientID")
+	private Client client;
 
 	protected Orders() {}
 
@@ -33,8 +33,19 @@ public class Orders {
 		this.dessert= dessert;
 	}
 
+	@Override
+	public String toString() {
+		return String.format(
+				"Orders[id=%d, clientID=%d, entry='%s', mainCourse='%s', drink='%s', dessert='%s']",
+				id, client.getId(), entry, mainCourse, drink, dessert);
+	}
+	
 	public Long getId() {
 		return id;
+	}
+
+	public Long getClientID() {
+		return client.getId();
 	}
 
 	public String getEntry() {

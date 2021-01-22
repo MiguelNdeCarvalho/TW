@@ -18,7 +18,7 @@ public class NewOrderController {
     
     @PostMapping("/new-order")
 	public String newOrder(
-			@RequestParam(name="clientID", required=true) long clientID, 
+			@RequestParam(name="clientID", required=false) long clientID, 
 			@RequestParam(name="entry", required=false, defaultValue="") String entry,
 			@RequestParam(name="mainCourse", required=false, defaultValue="") String mainCourse,
 			@RequestParam(name="drink", required=false, defaultValue="") String drink,
