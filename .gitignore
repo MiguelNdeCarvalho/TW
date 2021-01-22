@@ -123,5 +123,9 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
-
+.classpath
+.project
 # End of https://www.toptal.com/developers/gitignore/api/vscode,java,java-web,gradle,eclipse
+
+# Springboot
+test.mv.db
