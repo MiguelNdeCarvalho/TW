@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<title>Criar encomenda</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Criar encomenda</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-
-	<h3>Criar encomenda</h3>
-	<form method='post' action='/new-order'>
+    <h3>Criar encomenda</h3>
+    <form method='post' th:action='@{/new-order}'>
 		
 		<label>ID do Cliente:</label>
 		<input type="text" id="clientID" name="clientID"/> 
@@ -33,6 +32,8 @@
 
 	</form>
 
-
+	<form method='post' th:action='@{/logout}'>
+		<input type="submit" value="Logout">
+	</form>
 </body>
 </html>
