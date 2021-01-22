@@ -13,7 +13,7 @@ public class Client {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String firstName, lastName, mail;
+	private String firstName, lastName, mail, username, password, role;
 
 	@OneToMany(mappedBy = "client")
     	private List<Orders> orders;
