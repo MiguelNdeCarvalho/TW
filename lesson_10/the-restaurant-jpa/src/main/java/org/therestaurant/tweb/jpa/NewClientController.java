@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Controller
@@ -22,10 +23,12 @@ public class NewClientController {
 			@RequestParam(name="firstName", required=false, defaultValue="World") String firstName, 
 			@RequestParam(name="lastName", required=false, defaultValue="") String lastName,
 			@RequestParam(name="mail", required=false, defaultValue="") String mail,
+			@RequestParam(name="username", required=false, defaultValue="") String username,
+			@RequestParam(name="password", required=false, defaultValue="") String password,
 			Model model) 
 	{
-		
-		repository.save(new Client(firstName, lastName, mail));
+		String encodedPassword = new BCryptPasswordEncoder().encode(password);
+		repository.save(new Client(firstName, lastName, mail, username, encodedPassword, "user"));
 		
 		log.info("Customers found with findAll():");
 		log.info("-------------------------------");
