@@ -20,15 +20,16 @@ public class NewClientController {
     
 	@PostMapping("/new-client")
 	public String newClient(
-			@RequestParam(name="firstName", required=false, defaultValue="World") String firstName, 
+			@RequestParam(name="firstName", required=false, defaultValue="") String firstName, 
 			@RequestParam(name="lastName", required=false, defaultValue="") String lastName,
 			@RequestParam(name="mail", required=false, defaultValue="") String mail,
 			@RequestParam(name="username", required=false, defaultValue="") String username,
 			@RequestParam(name="password", required=false, defaultValue="") String password,
+			@RequestParam(name="role", required=false, defaultValue="user") String role,
 			Model model) 
 	{
 		String encodedPassword = new BCryptPasswordEncoder().encode(password);
-		repository.save(new Client(firstName, lastName, mail, username, encodedPassword, "user"));
+		repository.save(new Client(firstName, lastName, mail, username, encodedPassword, "ROLE_" + role.toUpperCase()));
 		
 		log.info("Customers found with findAll():");
 		log.info("-------------------------------");
